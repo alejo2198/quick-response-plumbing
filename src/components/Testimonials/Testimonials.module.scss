@@ -1,0 +1,99 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles//partials/variables'as *;
+
+.testimonials{
+    &__container{
+        display:none;
+        @include tablet{
+            display:flex;
+            justify-content: center;
+            gap:.7rem;
+            list-style: none;
+            margin:1.87rem auto;
+            & > :nth-child(3){
+                display: none;
+            }
+        }
+        @include desktop{
+            gap:3rem;
+            & > :nth-child(3){
+                display: block;
+            }
+        }
+        
+    }
+
+    &__section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #F4D35E;
+        margin-top: 3.4rem;
+        margin-bottom: 3.4rem;
+        padding: 1.13rem 0;
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        @include tablet{
+            padding: 1.88rem;
+            margin-top: 3.5rem;
+            margin-bottom: 3.5rem;
+        }
+        @include desktop{
+            padding-bottom: 2.75rem;
+            margin-top: 7.2rem;
+            margin-bottom: 7.2rem;
+        }
+    }
+
+    &__stars{
+        display: flex;
+        gap:.5rem;
+        margin: .34rem auto;
+        @include tablet{
+            margin-top: 1.25rem;
+        }
+        @include desktop{
+            margin-top: .75rem;
+    
+        }   
+    }
+    &__heading{
+        @include desktop{
+            font-size: 2.5rem;
+        }
+    }
+   
+    &__text{
+        @include styleText(1rem,600);
+        font-family: 'Inter';
+        @include tablet{
+            @include styleText(1.4375rem,600);
+        }
+    }
+    &__button{
+        @include styleText($m-button-fs,600);
+        padding:.62rem;
+        border-radius: 0.9375rem;
+        color:white;
+        background-color: $primary-text-color;
+        outline: none;
+        border: none;
+
+        &:hover{
+            transform: scale(1.05);
+            border:3px solid white;
+            box-shadow: 5px 5px 2px rgba($primary-text-color,.5);
+        }
+        @include tablet{
+            @include styleText($t-button-fs,600);
+            margin-bottom: .5rem;
+        }
+        @include desktop{
+            @include styleText($d-button-fs,600);
+            margin-bottom: .5rem;
+            padding:.88rem;
+            margin-top: 1rem;
+        }
+    }
+}

@@ -1,0 +1,117 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles//partials/variables'as *;
+
+.reasons{
+    padding:.5rem $small-spacing $medium-spacing;
+    @include mobile-tablet{
+        padding: .5rem $medium-spacing $medium-spacing;
+        position: relative;
+    }
+    @include tablet{
+        padding:0 1.87rem 2.25rem;
+    }
+    @include desktop{
+        padding:0 0 6.5rem;
+        
+    }
+    &__container{
+        display:flex;
+        gap:$medium-spacing;
+    }
+    &__reason-list{
+        @include desktop{
+            margin-top: 3.5rem;
+        }
+    }
+
+    &__reason{
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        margin-bottom: $extra-small-spacing;
+        @include tablet{
+            gap:1rem;
+            margin-bottom: 1.5rem;
+        }
+        @include desktop{
+            gap:1.25rem;
+            margin-bottom: 1.2rem;
+        }
+    }
+    &__header{
+        margin-bottom: $medium-spacing;
+    }
+    &__text{
+        @include styleText($m-reasons-fs,400);
+        @include tablet{
+            @include styleText($t-reasons-fs,400);
+        }
+        @include desktop{
+            @include styleText($d-reasons-fs,400);
+        }
+    }
+    &__icon{
+        height: 1.625rem;
+        @include tablet{
+            height: 2.125rem;
+        }
+        @include desktop{
+            height: 2.5rem;
+        }
+    }
+    &__illustration{
+        display: none;
+        @include tablet{
+            display: block;
+            width:18.5rem
+        }
+        @include desktop{
+            width: 37rem;
+        }
+    }
+}
+.cta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mobile-tablet{
+        position:absolute;
+        bottom:5rem;
+        right:10%;
+    }
+    @include tablet{
+        position: static;
+    }
+    @include desktop{
+        position:absolute;
+        bottom:5rem;
+        right:3rem;
+    }
+    &__phone-number{
+        @include styleText($m-phone-fs,600);
+        color: $primary-text-color;
+        text-decoration: none;
+        background-image: linear-gradient(rgba(244,232,105,0),#FAF2D3);
+        padding:.5rem 2.2rem 0;
+        margin-bottom: .75rem;
+        @include tablet{
+            @include styleText($t-phone-fs,600);
+            padding:.5rem .5rem 0;
+        }
+        @include desktop{
+            @include styleText($d-phone-fs,600);
+            padding:.5rem .5rem 0;
+        }
+    }
+    &__text{
+        @include styleText($m-call-now-fs,600);
+        @include tablet{
+            @include styleText($t-call-now-fs,600);
+            margin-bottom: 3.5rem;
+        }
+        @include desktop{
+            @include styleText($d-call-now-fs,600);
+            margin-bottom: 3.5rem;
+        }
+    }
+}

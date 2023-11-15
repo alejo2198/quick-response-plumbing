@@ -1,0 +1,35 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles//partials/variables'as *;
+
+.media-scroller{
+    display: flex;
+    overflow-x:scroll;
+    overscroll-behavior-inline: contain;
+    gap:.88rem;
+    animation: scroll 30s linear infinite reverse ;
+    width: max-content;
+    @include tablet{
+        gap:1.5rem;
+        animation-duration: 25s;
+    }
+
+    &__image{
+        width: 18.125rem;
+        height: 24.22831rem;
+        border-radius: 1.5625rem;
+        @include tablet{
+            width: 24.5rem;
+            height: 32.75rem;
+        }
+    }
+}
+
+@keyframes scroll {
+    //the -.44rem refers to half of the gap set in the media scroller
+    to{
+        transform: translate(calc(-50% - 0.44rem));
+        @include tablet{
+            transform: translate(calc(-50% - .75rem));
+        }
+    }
+}

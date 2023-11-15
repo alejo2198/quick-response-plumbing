@@ -1,0 +1,161 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles//partials/variables'as *;
+@use '../../styles/partials/fonts' as *;
+
+.header{
+    padding:.75rem 1rem 1rem;
+    background-image: linear-gradient(88deg, #3085C3 28.58%, rgba(217, 217, 217, 0.00) 221.77%);
+    color:white;
+    position:relative;
+    @include tablet{
+        padding:1.88rem;
+    }
+    @include desktop{
+        padding:2.25rem 0 5.78rem
+    }
+    
+
+    //INNER CONTAINERS
+    &__nav-container{
+        display: flex;
+        justify-content: space-between;
+        @include tablet{
+            margin-bottom: 1.62rem;
+            align-items: center;
+        }
+        @include desktop{
+            max-width: $desktop-max-width;
+            margin:0 auto;
+            padding: 0 4.5rem;
+            align-items: flex-start;
+            
+        }
+    }
+    &__main-container{
+        display:flex;
+        flex-direction: column;
+        @include desktop{
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            max-width: $desktop-max-width;
+            margin: 0 auto;
+            padding: 0 4.5rem;
+        }
+    }
+    &__image-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__text-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include desktop{
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+    }
+    &__call-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:$extra-small-spacing;
+        @include desktop{
+            gap:2.2rem;
+        }
+    }
+
+
+    //ELEMENTS
+
+    &__logo{
+        color:$secondary-dark-color;
+        @include styleText($m-logo-fs,600);
+        margin-bottom: $small-spacing;
+        @include tablet{
+            @include styleText($t-logo-fs,600);
+            margin-bottom: 0;
+        }
+        @include desktop{
+            @include styleText($d-logo-fs,600);
+            margin-bottom: 3.25rem;
+        }
+    }
+
+    &__image{
+        width:16.5rem;
+        border-radius: .625rem;
+        border: 1px solid #FFF;
+        box-shadow: 0px 4px 20px  #2E658D;
+        margin-bottom: .75rem;
+        @include tablet{
+            width: 29.75rem;
+            border: 5px solid #FFF;
+            margin-bottom: 1rem;
+        }
+        @include desktop{
+            width: 40.375rem;
+            margin-bottom:0;
+        }
+    }
+
+    &__heading{
+        text-align: center;
+        @include styleText($m-hero-main-heading-fs,600);
+        margin-bottom:.2rem;
+        @include tablet{
+            @include styleText($t-hero-main-heading-fs,600);
+            margin-bottom:.5rem;
+        }
+        @include desktop{
+            @include styleText($d-hero-main-heading-fs,600);
+            margin-bottom:1.3rem;
+            width: 80%;
+            text-align: left;
+            line-height: 4rem;
+        }
+    }
+    &__text{
+        color:white;
+        text-align: center;
+        line-height: 1.2rem;
+        margin-bottom:.2rem;
+        width:90%;
+        @include tablet{
+            width: 80%;
+            @include styleText(1.25rem,400);
+            line-height: normal;
+            margin-bottom:.75rem;
+        }
+        @include desktop{
+            text-align: left;
+            margin-bottom:2.2rem;
+            width: 100%;
+        }
+    }
+    &__phone-number{
+        text-decoration: none;
+        @include styleText($m-phone-fs,500);
+        color: $secondary-dark-color;
+        @include tablet{
+            @include styleText($t-phone-fs,500);
+        }
+        @include desktop{
+            @include styleText(2.5rem,500);
+        }
+    }
+    &__icon{
+        height:1.75rem;
+        width: 1.75rem;
+        @include tablet{
+            height:2.75rem;
+            width: 2.75rem;
+        }
+        @include tablet{
+            width: 4.5625rem;
+            height: 4.5625rem;
+        }
+    }
+}

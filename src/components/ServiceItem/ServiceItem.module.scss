@@ -1,0 +1,42 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles//partials/variables'as *;
+
+.service-item{
+    display:flex;
+    align-items: center;
+    gap:$small-spacing;
+    @include tablet{
+        gap: 2.12rem;
+    }
+    @include desktop{
+        gap: 3rem;
+    }
+    
+
+    &__text{
+        @include styleText($m-service-fs,500);
+        width:14.5rem;
+        padding-bottom: .2rem;
+        border-bottom: .125rem $secondary-light-color solid;
+        @include tablet{
+            @include styleText($t-service-fs,500);
+            width:20rem;
+            padding-bottom: .7rem;
+            border-bottom: .375rem $secondary-light-color solid;
+        }
+        @include desktop{
+            @include styleText($d-service-fs,500);
+            width:25.75rem;
+            padding-bottom: .5rem;
+        }
+    }
+    &__icon{
+        width: 2.75rem;
+        @include tablet{
+            width: 3.5rem;
+        }
+        @include desktop{
+            width: 5.625rem;
+        }
+    }
+}

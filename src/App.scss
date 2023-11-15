@@ -1,0 +1,52 @@
+@use './styles/partials/mixins' as *;
+@use './styles//partials/variables'as *;
+@use './styles/partials/fonts' as *;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Murecho';
+    color:$primary-text-color;
+}
+main{
+    overflow: hidden;
+    @include desktop{
+        max-width: $desktop-max-width;
+        margin:0 auto;
+        padding: 2.5rem 4.5rem 0;
+    }
+    
+}
+
+p{
+    color:$primary-text-color;
+    @include styleText($m-body-fs,400);
+    @include tablet{
+        @include styleText($t-body-fs,400);  
+    }
+    @include desktop{
+        @include styleText($d-body-fs,400);
+    }
+}
+
+h2{
+    color:$primary-text-color;
+    @include styleText($m-section-heading-fs,600);
+    @include tablet{
+        @include styleText($t-section-heading-fs,600);
+    }
+    @include desktop{
+        @include styleText($d-section-heading-fs,600);
+    }
+}
+
+button{
+    cursor: pointer;
+}

@@ -1,0 +1,34 @@
+@use '../../../styles/partials/mixins' as *;
+@use '../../../styles//partials/variables'as *;
+
+.nav{
+    display: none;
+    @include tablet{
+        display: block;
+    }
+    @include desktop{
+        position: relative;
+        top:.35rem
+    }
+    
+    &__links{
+        display: flex;
+        list-style: none;
+        gap:1.5rem;
+        @include desktop{
+            gap:2.81rem;
+        }
+    }
+    &__link{
+        color: white;
+        @include styleText($t-nav-link-fs,400);
+        text-decoration: none;
+        &:hover{
+            font-weight: 500;
+            text-decoration: underline;
+        }
+        @include desktop{
+            @include styleText($d-nav-link-fs,400);
+        }
+    }
+}

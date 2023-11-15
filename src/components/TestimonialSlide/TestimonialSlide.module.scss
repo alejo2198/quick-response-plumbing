@@ -1,0 +1,26 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles//partials/variables'as *;
+
+.testimonial{
+    background-color:white;
+    padding:1rem 1.2rem;
+    width: 17.7rem;
+    height: 17.56rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0.76319rem;
+    @include tablet{
+        padding:1.5rem 1.25rem;
+        width: 21.75rem;
+        height: 24.0625rem; 
+    }
+    
+
+    &__text{
+        @include styleText($m-testimonial-fs,400);
+        @include tablet{
+            @include styleText($t-testimonial-fs,400)
+        }
+    }
+}
