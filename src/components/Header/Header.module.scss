@@ -136,14 +136,25 @@
         }
     }
     &__phone-number{
-        text-decoration: none;
         @include styleText($m-phone-fs,500);
+        text-underline-offset: .3rem;
+        text-decoration-thickness: .1rem;
         color: $secondary-dark-color;
+        padding-right: .1rem;
+        
+        &:hover{
+            padding-right:0 ;
+            position: relative;
+            font-weight: 600;
+            text-decoration-thickness: .2rem;
+        }
         @include tablet{
             @include styleText($t-phone-fs,500);
+            padding-right: .2rem;
         }
         @include desktop{
             @include styleText(2.5rem,500);
+            padding-right: .25rem;
         }
     }
     &__icon{

@@ -78,12 +78,18 @@
         color:white;
         background-color: $primary-text-color;
         outline: none;
-        border: none;
+        border: 2px solid transparent;
+        @include tablet{
+            border-width: 3px;
+        }
 
         &:hover{
-            transform: scale(1.05);
-            border:3px solid white;
+            //transform: scale(1.05);
+            border:2px solid white;
             box-shadow: 5px 5px 2px rgba($primary-text-color,.5);
+            @include tablet{
+                border-width: 3px;
+            }
         }
         @include tablet{
             @include styleText($t-button-fs,600);

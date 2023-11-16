@@ -90,10 +90,13 @@
     &__phone-number{
         @include styleText($m-phone-fs,600);
         color: $primary-text-color;
-        text-decoration: none;
         background-image: linear-gradient(rgba(244,232,105,0),#FAF2D3);
         padding:.5rem 2.2rem 0;
         margin-bottom: .75rem;
+        &:hover{
+            font-weight: 700;
+            
+        }
         @include tablet{
             @include styleText($t-phone-fs,600);
             padding:.5rem .5rem 0;
