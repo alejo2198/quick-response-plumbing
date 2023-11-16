@@ -27,7 +27,7 @@ const WhyUs = () => {
             </div>
             
             <div className={classes['cta']}>
-                <a className={classes['cta__phone-number']}href="tel:+4169992999">416-999-2999</a>
+                <a className={classes['cta__phone-number']}href="tel:4169992999">416-999-2999</a>
                 <p className={classes['cta__text']}>Call now for a job estimate!</p>
             </div>
         </section>

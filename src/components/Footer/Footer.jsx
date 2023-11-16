@@ -11,7 +11,7 @@ const Footer = () => {
                 </div>
                 <div className={classes['footer__container-group']}>
                     <div className={classes['footer__container-sections']}>
-                        <a className={classes['footer__heading']} href="tel:+4169992999">Contact Us</a>
+                        <a className={classes['footer__heading']} href="tel:4169992999">Contact Us</a>
                         <p className={classes['footer__number']}>416-999-2999</p>
                     </div>
                     <div className={classes['footer__container-sections']}>
